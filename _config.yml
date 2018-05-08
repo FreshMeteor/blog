@@ -13,7 +13,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://freshmeteor.github.io/blog/
+url: https://github.com/FreshMeteor/blog/blob/master/source/_posts
 root: /blog/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
