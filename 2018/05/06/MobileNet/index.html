@@ -11,19 +11,19 @@
 <meta name="keywords" content="神经网络">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MobileNet学习">
-<meta property="og:url" content="https://freshmeteor.github.com/blog/2018/05/06/MobileNet/index.html">
+<meta property="og:url" content="https://freshmeteor.github.io/blog/2018/05/06/MobileNet/index.html">
 <meta property="og:site_name" content="MoleculeZ">
 <meta property="og:description" content="MobileNet学习心得——一种高效轻量神经网络这是我的第一篇博客。不把自己学到的东西写下来，始终感觉和没学到似的。希望把自己所认识的记录下来，转换成自己真正拥有的~ 我不想用很官方的语言来些东西，我想用自己的话把道理讲清楚。首先这个MobileNet的论文是谷歌于2017年发表在archive上的，现在时间过去了一年，MobileNet已经有了V2，但是核心是一样的——深度可分离卷积。话不多说">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:image" content="https://raw.githubusercontent.com/FreshMeteor/blog/master/image_blog/image1.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/FreshMeteor/blog/master/image_blog/image2.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/FreshMeteor/blog/master/image_blog/image3.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/FreshMeteor/blog/master/image_blog/iamge4.PNG">
-<meta property="og:updated_time" content="2018-05-08T14:02:30.224Z">
+<meta property="og:image" content="https://freshmeteor.github.io/blog/2018/05/06/MobileNet/image1.png">
+<meta property="og:image" content="https://freshmeteor.github.io/blog/2018/05/06/MobileNet/image2.png">
+<meta property="og:image" content="https://freshmeteor.github.io/blog/2018/05/06/MobileNet/image3.png">
+<meta property="og:image" content="https://freshmeteor.github.io/blog/2018/05/06/MobileNet/iamge4.PNG">
+<meta property="og:updated_time" content="2018-05-08T14:39:23.418Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MobileNet学习">
 <meta name="twitter:description" content="MobileNet学习心得——一种高效轻量神经网络这是我的第一篇博客。不把自己学到的东西写下来，始终感觉和没学到似的。希望把自己所认识的记录下来，转换成自己真正拥有的~ 我不想用很官方的语言来些东西，我想用自己的话把道理讲清楚。首先这个MobileNet的论文是谷歌于2017年发表在archive上的，现在时间过去了一年，MobileNet已经有了V2，但是核心是一样的——深度可分离卷积。话不多说">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/FreshMeteor/blog/master/image_blog/image1.png">
+<meta name="twitter:image" content="https://freshmeteor.github.io/blog/2018/05/06/MobileNet/image1.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="MoleculeZ" type="application/atom+xml">
   
@@ -64,7 +64,7 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://freshmeteor.github.com/blog"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://freshmeteor.github.io/blog"></form>
       </div>
     </div>
   </div>
@@ -93,9 +93,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="MobileNet学习心得——一种高效轻量神经网络"><a href="#MobileNet学习心得——一种高效轻量神经网络" class="headerlink" title="MobileNet学习心得——一种高效轻量神经网络"></a>MobileNet学习心得——一种高效轻量神经网络</h1><h3 id="这是我的第一篇博客。不把自己学到的东西写下来，始终感觉和没学到似的。希望把自己所认识的记录下来，转换成自己真正拥有的-我不想用很官方的语言来些东西，我想用自己的话把道理讲清楚。"><a href="#这是我的第一篇博客。不把自己学到的东西写下来，始终感觉和没学到似的。希望把自己所认识的记录下来，转换成自己真正拥有的-我不想用很官方的语言来些东西，我想用自己的话把道理讲清楚。" class="headerlink" title="这是我的第一篇博客。不把自己学到的东西写下来，始终感觉和没学到似的。希望把自己所认识的记录下来，转换成自己真正拥有的~ 我不想用很官方的语言来些东西，我想用自己的话把道理讲清楚。"></a>这是我的第一篇博客。不把自己学到的东西写下来，始终感觉和没学到似的。希望把自己所认识的记录下来，转换成自己真正拥有的~ 我不想用很官方的语言来些东西，我想用自己的话把道理讲清楚。</h3><p>首先这个MobileNet的论文是谷歌于2017年发表在archive上的，现在时间过去了一年，MobileNet已经有了V2，但是核心是一样的——深度可分离卷积。话不多说，我们一起来看一下深度可分离卷积是个什么情况：</p>
-<p><img src="https://raw.githubusercontent.com/FreshMeteor/blog/master/image_blog/image1.png" alt="深度可分离卷积概念图"></p>
+<p><img src="image1.png" alt="深度可分离卷积概念图"></p>
 
-<h3 id="深度可分离卷积可以分成深度卷积核逐点卷积两个部分"><a href="#深度可分离卷积可以分成深度卷积核逐点卷积两个部分" class="headerlink" title="深度可分离卷积可以分成深度卷积核逐点卷积两个部分"></a>深度可分离卷积可以分成深度卷积核逐点卷积两个部分</h3><p>我们先不管这两个卷积，先看一下常规卷积操作：<br><img src="https://raw.githubusercontent.com/FreshMeteor/blog/master/image_blog/image2.png" alt="常规卷积"><br>输入图片是(7,7,2)，也就是7×7大小2通道的图片，经过1个2通道卷积核的作用得到一个1通道的output。而现实情况是卷积核(filter)的个数会很多，一般比通道数多很多，<strong>而output的通道数其实就等于用于卷积的卷积核个数了。</strong><br>为了加深理解，我用tensorflow进行了一个很简单的实践：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import tensorflow as tf</span><br><span class="line">img1 = tf.constant(value=1,shape = [1,7,7,3], dtype=tf.float32)   </span><br><span class="line">filter = tf.constant(value=1, shape=[5,5,3,6],dtype=tf.float32)   </span><br><span class="line"></span><br><span class="line">out_img = tf.nn.conv2d(input=img1, filter=filter, strides=[1,1,1,1], padding=&apos;VALID&apos;)</span><br><span class="line">print(out_img.shape)</span><br></pre></td></tr></table></figure></p>
+<h3 id="深度可分离卷积可以分成深度卷积核逐点卷积两个部分"><a href="#深度可分离卷积可以分成深度卷积核逐点卷积两个部分" class="headerlink" title="深度可分离卷积可以分成深度卷积核逐点卷积两个部分"></a>深度可分离卷积可以分成深度卷积核逐点卷积两个部分</h3><p>我们先不管这两个卷积，先看一下常规卷积操作：<br><img src="image2.png" alt="常规卷积"><br>输入图片是(7,7,2)，也就是7×7大小2通道的图片，经过1个2通道卷积核的作用得到一个1通道的output。而现实情况是卷积核(filter)的个数会很多，一般比通道数多很多，<strong>而output的通道数其实就等于用于卷积的卷积核个数了。</strong><br>为了加深理解，我用tensorflow进行了一个很简单的实践：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import tensorflow as tf</span><br><span class="line">img1 = tf.constant(value=1,shape = [1,7,7,3], dtype=tf.float32)   </span><br><span class="line">filter = tf.constant(value=1, shape=[5,5,3,6],dtype=tf.float32)   </span><br><span class="line"></span><br><span class="line">out_img = tf.nn.conv2d(input=img1, filter=filter, strides=[1,1,1,1], padding=&apos;VALID&apos;)</span><br><span class="line">print(out_img.shape)</span><br></pre></td></tr></table></figure></p>
 <p>这里提一下输入图像和卷积核的shape是有区别的。首先shape定义出来的都是张量（关于张量的解释，知乎上有一个答主说的很清楚：<a href="https://www.zhihu.com/question/20695804/answer/76486670" target="_blank" rel="noopener">张量</a>）</p>
 <p>我怕我解释不好误导了你。不过对于图像来说这种低维的东西还是很好理解的。</p>
 <ul>
@@ -103,7 +103,7 @@
 <li>卷积核也是四阶的，分别代表[filter_height, filter_width, in_channerl, out_channels]</li>
 </ul>
 <p>在常规卷积的情况下，上述代码的out_img.shape打印出来的结果是[1,3,3,6]</p>
-<p>了解了常规卷积之后，我们可以来看看深度卷积是什么：<br><img src="https://raw.githubusercontent.com/FreshMeteor/blog/master/image_blog/image3.png" alt="深度卷积"><br>这张图是横着的，我们比较习惯于看竖着的，不过没关系，道理都是一样的。左边的是输入图像，这是一幅2通道的图像，右边分别是2通道的两个filter。深度卷积的卷积操作就是filter1的第一通道与输入图像第一通道做卷积，得到一张feature map，filter2的第一通道与输入图像第一通道做卷积，得到另一张feature map。以此类推，图中的卷积总共得到4张feature map。然后我们来看一些简单的代码实现：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import tensorflow as tf</span><br><span class="line">img1 = tf.constant(value=1,shape = [1,7,7,3], dtype=tf.float32)              </span><br><span class="line">filter = tf.constant(value=1, shape=[5,5,3,6],dtype=tf.float32)              </span><br><span class="line">out_img = tf.nn.depthwise_conv2d(input=img1, filter=filter, strides=[1,1,1,1], padding=&apos;VALID&apos;)</span><br><span class="line">print(out_img.shape)</span><br></pre></td></tr></table></figure></p>
+<p>了解了常规卷积之后，我们可以来看看深度卷积是什么：<br><img src="image3.png" alt="深度卷积"><br>这张图是横着的，我们比较习惯于看竖着的，不过没关系，道理都是一样的。左边的是输入图像，这是一幅2通道的图像，右边分别是2通道的两个filter。深度卷积的卷积操作就是filter1的第一通道与输入图像第一通道做卷积，得到一张feature map，filter2的第一通道与输入图像第一通道做卷积，得到另一张feature map。以此类推，图中的卷积总共得到4张feature map。然后我们来看一些简单的代码实现：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import tensorflow as tf</span><br><span class="line">img1 = tf.constant(value=1,shape = [1,7,7,3], dtype=tf.float32)              </span><br><span class="line">filter = tf.constant(value=1, shape=[5,5,3,6],dtype=tf.float32)              </span><br><span class="line">out_img = tf.nn.depthwise_conv2d(input=img1, filter=filter, strides=[1,1,1,1], padding=&apos;VALID&apos;)</span><br><span class="line">print(out_img.shape)</span><br></pre></td></tr></table></figure></p>
 <p>上述代码的输出结果是[1,3,3,18]，多尝试几次，我们不难发现，深度卷积的输出结果的通道数完全就是输入图像的in_channels与filter的out_channels的乘积好嘛！官方给出的解释是输出通道=in_channels * channel_multiplier，其实channel_multiplier也就是filter的shape中定义的out_channels了。</p>
 <p>可是，还是有人提出疑问，从MobileNet的论文中给出的概念图（文中第一幅图）来看，深度卷积核的每一个滤波器的通道数根本就是1，而测试代码用的滤波器的通道数必须和输入图像的通道数一致，否则会报错！这是为什么呢？也就是说，如果按照概念图的方式来做卷积，将会是一个怎样的情况呢？</p>
 <p>会报错</p>
@@ -112,13 +112,13 @@
 <p> 接下来看深度可分卷积，其实就是做完深度卷积之后，再用1*1大小的卷积核来对输出的特征图做一次常规卷积实现降维，提升网络的表达能力。<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> import tensorflow as tf</span><br><span class="line">img1 = tf.constant(value=1,shape = [1,7,7,3], dtype=tf.float32)              </span><br><span class="line">filter = tf.constant(value=1, shape=[5,5,3,6],dtype=tf.float32)              </span><br><span class="line">point_filter = tf.constant(value = 1,shape = [1,1,18,4],dtype=tf.float32)    </span><br><span class="line">out_img = tf.nn.separable_conv2d(input=img1, depthwise_filter=filter,pointwise_filter=point_filter, strides=[1,1,1,1], padding=&apos;VALID&apos;)</span><br><span class="line">print(out_img.shape)</span><br></pre></td></tr></table></figure></p>
 <p>separable_conv2d函数比之前多了一个逐点卷积核参数，其实你完全可以调用一次深度卷积，再调用一次常规卷积来实现separable_conv2d。</p>
 <p>MobileNet的核心部分讨论完了，现在讨论一下计算复杂度问题（这也是令MobileNet作者引以为豪的东西<em>(:з)∠)</em>）</p>
-<p>论文中给出的公式如下：<img src="https://raw.githubusercontent.com/FreshMeteor/blog/master/image_blog/iamge4.PNG" alt="公式"></p>
+<p>论文中给出的公式如下：<img src="iamge4.PNG" alt="公式"></p>
 <p>分子是深度可分卷积的计算复杂度，分母是常规卷积的计算复杂度。DK是输入图片尺寸，DF是输出图片尺寸，M是卷积核通道数，N是卷积核个数。从结果看，确实比常规卷积快了不少~但是也因为滤波器个数的减少，导致精度有一定的下降~（复杂度公式不能按照代码上定义的张量来算，这只是表面的一个现象，真实情况是代码上面的加黑字体…）</p>
 <h2 id="总而言之，深度可分卷积快速的原因是牺牲了卷积核个数（卷积核个数从N减少到了M），但是减少了计算复杂度。"><a href="#总而言之，深度可分卷积快速的原因是牺牲了卷积核个数（卷积核个数从N减少到了M），但是减少了计算复杂度。" class="headerlink" title="总而言之，深度可分卷积快速的原因是牺牲了卷积核个数（卷积核个数从N减少到了M），但是减少了计算复杂度。"></a>总而言之，深度可分卷积快速的原因是牺牲了卷积核个数（卷积核个数从N减少到了M），但是减少了计算复杂度。</h2>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://freshmeteor.github.com/blog/2018/05/06/MobileNet/" data-id="cjgxroc710000ecu1mqzcyjoc" class="article-share-link">Share</a>
+      <a data-url="https://freshmeteor.github.io/blog/2018/05/06/MobileNet/" data-id="cjgxs70om00000gu1kl631wvp" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/神经网络/">神经网络</a></li></ul>
