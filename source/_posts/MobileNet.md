@@ -9,8 +9,9 @@ tags: 神经网络
 
 首先这个MobileNet的论文是谷歌于2017年发表在archive上的，现在时间过去了一年，MobileNet已经有了V2，但是核心是一样的——深度可分离卷积。话不多说，我们一起来看一下深度可分离卷积是个什么情况：
 
-![深度可分离卷积概念图](../../source/_posts/MobileNet/image1.png)
+![深度可分离卷积概念图](https://raw.githubusercontent.com/FreshMeteor/blog/master/image_blog/image1.png)
 
+{% asset_img ../../source/_posts/MobileNet/image1.png  %}
 ### 深度可分离卷积可以分成深度卷积核逐点卷积两个部分
 
 我们先不管这两个卷积，先看一下常规卷积操作：
