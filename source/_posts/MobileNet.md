@@ -9,13 +9,13 @@ tags: 神经网络
 
 首先这个MobileNet的论文是谷歌于2017年发表在archive上的，现在时间过去了一年，MobileNet已经有了V2，但是核心是一样的——深度可分离卷积。话不多说，我们一起来看一下深度可分离卷积是个什么情况：
 
-![深度可分离卷积概念图](https://raw.githubusercontent.com/FreshMeteor/blog/master/image_blog/image1.png)
+![深度可分离卷积概念图](image1.png)
 
 {% asset_img ../../source/_posts/MobileNet/image1.png  %}
 ### 深度可分离卷积可以分成深度卷积核逐点卷积两个部分
 
 我们先不管这两个卷积，先看一下常规卷积操作：
-![常规卷积](https://raw.githubusercontent.com/FreshMeteor/blog/master/image_blog/image2.png)
+![常规卷积](image2.png)
 输入图片是(7,7,2)，也就是7×7大小2通道的图片，经过1个2通道卷积核的作用得到一个1通道的output。而现实情况是卷积核(filter)的个数会很多，一般比通道数多很多，**而output的通道数其实就等于用于卷积的卷积核个数了。**
 为了加深理解，我用tensorflow进行了一个很简单的实践：
 ```tensorflow下的常规卷积
@@ -36,7 +36,7 @@ https://www.zhihu.com/question/20695804/answer/76486670)）
 在常规卷积的情况下，上述代码的out_img.shape打印出来的结果是[1,3,3,6]
 
 了解了常规卷积之后，我们可以来看看深度卷积是什么：
-![深度卷积](https://raw.githubusercontent.com/FreshMeteor/blog/master/image_blog/image3.png)
+![深度卷积](image3.png)
 这张图是横着的，我们比较习惯于看竖着的，不过没关系，道理都是一样的。左边的是输入图像，这是一幅2通道的图像，右边分别是2通道的两个filter。深度卷积的卷积操作就是filter1的第一通道与输入图像第一通道做卷积，得到一张feature map，filter2的第一通道与输入图像第一通道做卷积，得到另一张feature map。以此类推，图中的卷积总共得到4张feature map。然后我们来看一些简单的代码实现：
 ```
 import tensorflow as tf
@@ -69,7 +69,7 @@ separable_conv2d函数比之前多了一个逐点卷积核参数，其实你完�
 
 MobileNet的核心部分讨论完了，现在讨论一下计算复杂度问题（这也是令MobileNet作者引以为豪的东西_(:з)∠)_）
 
-论文中给出的公式如下：![公式](https://raw.githubusercontent.com/FreshMeteor/blog/master/image_blog/iamge4.PNG)
+论文中给出的公式如下：![公式](iamge4.PNG)
 
 分子是深度可分卷积的计算复杂度，分母是常规卷积的计算复杂度。DK是输入图片尺寸，DF是输出图片尺寸，M是卷积核通道数，N是卷积核个数。从结果看，确实比常规卷积快了不少~但是也因为滤波器个数的减少，导致精度有一定的下降~（复杂度公式不能按照代码上定义的张量来算，这只是表面的一个现象，真实情况是代码上面的加黑字体...）
 
