@@ -4,9 +4,9 @@
 
 # Head info
 head:
-    favicon: "/img/favicon.png"
-    high_res_favicon: "/img/favicon.png"
-    apple_touch_icon: "/img/favicon.png"
+    favicon: "/blog/img/favicon.png"
+    high_res_favicon: "/blog/img/favicon.png"
+    apple_touch_icon: "/blog/img/favicon.png"
     keywords:
     site_verification:
         google:
@@ -63,18 +63,18 @@ thumbnail:
 #         type available value: A (animal), C (culture), N (nature), S (space), T (travel)
 background:
     #purecolor: "#F5F5F5"
-    bgimg: "/img/bg.png"
+    bgimg: "/blog/img/bg.png"
     bing:
         enable: false
         parameter:
 
 # Images Settings
 img:
-    logo: "/img/logo.png"
-    avatar: "/img/avatar.png"
-    daily_pic: "/img/daily_pic.png"
-    sidebar_header: "/img/sidebar_header.png"
-    random_thumbnail: "/img/random/material-"
+    logo: "/blog/img/logo.png"
+    avatar: "/blog/img/avatar.png"
+    daily_pic: "/blog/img/daily_pic.png"
+    sidebar_header: "/blog/img/sidebar_header.png"
+    random_thumbnail: "/blog/img/random/material-"
     footer_image:
         #upyun_logo:
             #link: "https://www.upyun.com/"
