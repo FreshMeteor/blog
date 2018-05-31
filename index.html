@@ -65,6 +65,112 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-ComputerNetwork" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2018/05/28/ComputerNetwork/" class="article-date">
+  <time datetime="2018-05-28T09:13:17.000Z" itemprop="datePublished">2018-05-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2018/05/28/ComputerNetwork/">ComputerNetwork</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="计算机网络学习心得"><a href="#计算机网络学习心得" class="headerlink" title="计算机网络学习心得"></a>计算机网络学习心得</h1><h2 id="第一章-计算机网络和因特网"><a href="#第一章-计算机网络和因特网" class="headerlink" title="第一章 计算机网络和因特网"></a>第一章 计算机网络和因特网</h2><h3 id="关键术语"><a href="#关键术语" class="headerlink" title="关键术语"></a>关键术语</h3><ul>
+<li>分组交换机(packet switch)</li>
+<li>路由器(router)</li>
+<li>链路层交换机(link-later switch)</li>
+<li>TCP协议(Transmission Control Protocol)</li>
+<li>IP协议(Internet Protocol)</li>
+<li>接入网(access network)</li>
+<li>分组丢失(丢包)(packet lost)</li>
+<li>瓶颈链路(bottleneck link)</li>
+</ul>
+<h3 id="主要内容与问题"><a href="#主要内容与问题" class="headerlink" title="主要内容与问题"></a><strong>主要内容与问题</strong></h3><h2 id="Access-Network"><a href="#Access-Network" class="headerlink" title="Access Network"></a>Access Network</h2><ol>
+<li>residential access(家庭接入)</li>
+</ol>
+<ul>
+<li><p>DSL(Digital Subscriber Line)<br>  deployment: telephone company<br>  upstream: 1Mbps<br>  downstream: 8Mbps<br>  <strong>dedicated!</strong></p>
+</li>
+<li><p>HFC(Hybrid Fiber Coax)<br>  deployment: TV company<br>  upstream: 2Mbps<br>  downstream: 30Mbps<br>  <strong>shared</strong>  </p>
+</li>
+</ul>
+<ol start="2">
+<li>company access(企业接入)  </li>
+</ol>
+<ul>
+<li>Ethernet  </li>
+<li>WiFi</li>
+</ul>
+<ol start="3">
+<li>Wireless access networks<h3 id="Physical-Media"><a href="#Physical-Media" class="headerlink" title="Physical Media"></a>Physical Media</h3></li>
+</ol>
+<ul>
+<li>cable  </li>
+<li>fiber</li>
+<li>radio<h2 id="Network-Core"><a href="#Network-Core" class="headerlink" title="Network Core"></a>Network Core</h2></li>
+<li>circuit switching<br>在发送方与接收方之间预留所需资源，可以防止阻塞与资源占用。链路中的电路是通过频分复用(Frequency-Division Multiplexing，FDM)或时分复用(Time-Division Multiplexing，TDM)来实现的。  </li>
+</ul>
+<ul>
+<li>packet switching<br>端到端的时延:在源和目的地之间有N-1台路由器，故有N条路径，一个分组大小为L，传输速率都为R，所以端到端的时延=N*L/R<br>store-and-forward transmission机制，交换机刚开始收到一个分组的第一个比特的时候不能直接转发，要等整个分组都收到以后才能开始转发(报文message分成分组packet，分组再分成几部分发出)<br><strong>丢包</strong>:输出链路被占用，要输出的分组就放入输出缓存，当输出缓存也被占满的时候，到达的分组或已经排队的分组之一将被丢弃。<br>无需预留资源  <h2 id="网络层级结构"><a href="#网络层级结构" class="headerlink" title="网络层级结构"></a>网络层级结构</h2><img src="image1.png" alt="ISP互联">  <h2 id="Delay-packet-loss-and-throughput"><a href="#Delay-packet-loss-and-throughput" class="headerlink" title="Delay, packet loss and throughput"></a>Delay, packet loss and throughput</h2></li>
+<li>Four delays:<br>1.nodal processing delay<br>2.queuing delay<br>3.transmission delay(传输时延)<br>4.propagation delay(传播时延)<br><strong>传输时延和传播时延的区别：传输时延(transmission delay)是路由器将分组从内部推出所需要的时间，与分组长度和链路传输速率有关，与路由器之间的距离无关。传播时延(propagation delay)是一个比特从一台路由器向另一台路由器传播所需要的时间，与路由器之间的距离有关，与分组长度和链路传播速率无关。</strong></li>
+</ul>
+<p><strong>链路传输速率只是用来算路由器内部处理分组比特的，路由器之间传播分组比特的速率是由物理因素(光纤、双绞铜线)决定的！</strong>  </p>
+<ul>
+<li>throughput:<br>吞吐量取决于最慢速度。如果只有一条数据流通，那吞吐量近似等于链路最小速率。但例如，有5台电脑通过一条链路下载东西，则吞吐量=min{服务器接入链路速率，客户接入链路速率，链路传输速率/5}。  <h2 id="protocol-layers-service-models"><a href="#protocol-layers-service-models" class="headerlink" title="protocol layers, service models"></a>protocol layers, service models</h2><h3 id="top-down-approach"><a href="#top-down-approach" class="headerlink" title="top-down approach"></a><em>top-down approach</em></h3></li>
+<li>Internet Layers</li>
+</ul>
+<ol>
+<li>application<br><em>HTTP(web文档的请求与传送), SMTP(电子邮件报文的传输), FTP(端系统之间文件传送), DNS(域名系统)等等</em>。<br>位于应用层的端系统与端系统之间交换信息的分组即为<strong>报文(message)。</strong></li>
+<li>transport<br><em>TCP, UDP</em><br>运输层运输的是应用层的报文，所以位于运输层的分组称为<strong>报文段(segment)</strong>。</li>
+<li>network<br><em>IP protocol, routing protocol</em><br>网络层传输来自于运输层的报文段，位于网络层的分组称为<strong>数据报(datagram)</strong>。</li>
+<li>link<br><em>PPP(point-to-point protocol), Ethernet, WiFi, DOCSIS</em><br>链路层收到网络层的数据报，将该数据报分组发送给下一个结点，在下一个结点再上传回网络层。位于链路层的分组称为<strong>帧(frame)</strong>。</li>
+<li>physical<br>链路层是针对帧的，而物理层是针对帧的每一个比特。将每个比特一个一个的在结点中移动。</li>
+</ol>
+<ul>
+<li>Encapsulation(封装)<br>自顶向下包装，再自底向上解开包装实现端到端的数据移动。路由器识别网络层，链路层和物理层，但是交换机只识别链路层和物理层(所以交换机无法识别IP地址)</li>
+</ul>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a><strong>问题</strong></h2><ul>
+<li><p><strong>路由器如何知道该将收到的分组发向哪条链路呢？</strong><br>在因特网中每台路由器都有一个转发表，这些转发表可以将目的IP地址(或一部分地址)映射转换成输出链路。而这些转发表可以由路由选择协议(routing protocol)来自动配置。</p>
+</li>
+<li><p><strong>在存储转发机制中等待分组所有比特接收完毕的时间算作什么时延？</strong><br>传输时延。</p>
+</li>
+<li><p><strong>Consider sending a packet from a source host to a destination host over a fixed route. List the delay components in the end-to-end delay. Which of these delays are constant and which are variable?</strong><br>Nodal processing delay is variable.<br>Queuing delay is variable, because it depends on if there is a queue in route.<br>Transmission delay is variable. It depends on the size of packet.<br>Propagation delay is constant. Because the distance of two ends is constant.  </p>
+</li>
+<li><p><strong>Suppose Host A wants to send a large file to Host B. The path from Host A to Host B has three links, of rates R1 = 500kbps, R2 = 2Mbps, and R3 = 1Mbps.</strong><br><em>a. Assuming no other traffic in the network, what is the throughput for the file transfer?</em><br>Because of bottlenet link, the throughput = min{R1,R2,R3} = R1 = 500kbps.<br><em>b. Suppose the file is 4 million bytes. Dividing the file size by the throughput, roughly how long will it take to transfer the file to Host B?</em><br>time = 4000000/500000 = 8s<br><em>c. Repeat(a)and(b), but now with R2 reduced to 100 kbps</em><br>the throughput = 100 kbps<br>time_new = 4000000/100000 = 40s  </p>
+</li>
+<li><p><strong>What are the five layers in the Internet protocol stack? What are the principal responsibilities of each of these layers?</strong><br><em>application layer</em>: send <strong>message</strong> to transport layer, eg: HTTP, FTP, DNS, SMTP<br><em>transport layer</em>: send <strong>segment</strong> to network layer, recieve <strong>message</strong> from application, eg: TCP, UDP.<br><em>network layer</em>: recieve <strong>segment</strong> from transport layer, send <strong>datagram</strong> to link layer. eg:IP protocol, routing protocol.<br><em>link layer</em>: recieve <strong>datagram</strong> from network layer, send <strong>frame</strong> to physiccal layer. eg: PPP, Wi-Fi, Ehthernet, DOCSIS.<br><em>physical layer</em>: recieve <strong>frame</strong> from link layer. Deal with bit of frame.</p>
+</li>
+<li><p><strong>Which layers in the Internet protocol stack does a router process? Which layers does a link-layer switch process? Which layers does a host process?</strong><br>路由器处理物理层，链路层和网络层。交换机处理物理层和链路层。主机处理物理层，链路层，网络层，运输层和应用层。</p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://freshmeteor.github.io/blog/2018/05/28/ComputerNetwork/" data-id="cjhtz47w80000hgu1g3c4qcte" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ComputerNetwork/">ComputerNetwork</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-vultr服务器搭建ss心得" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2018/05/23/vultr服务器搭建ss心得/" class="article-date">
@@ -116,7 +222,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://freshmeteor.github.io/blog/2018/05/23/vultr服务器搭建ss心得/" data-id="cjhisugl40001bcu1jmdzcw62" class="article-share-link">Share</a>
+      <a data-url="https://freshmeteor.github.io/blog/2018/05/23/vultr服务器搭建ss心得/" data-id="cjhtz47xp0004hgu14crtoth4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Computer-Networking/">Computer Networking</a></li></ul>
@@ -176,7 +282,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://freshmeteor.github.io/blog/2018/05/06/MobileNet/" data-id="cjhisugk90000bcu1f91quj6o" class="article-share-link">Share</a>
+      <a data-url="https://freshmeteor.github.io/blog/2018/05/06/MobileNet/" data-id="cjhtz47xp0003hgu18zukvlam" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/神经网络/">神经网络</a></li></ul>
@@ -201,7 +307,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Computer-Networking/">Computer Networking</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/神经网络/">神经网络</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Computer-Networking/">Computer Networking</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/ComputerNetwork/">ComputerNetwork</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/神经网络/">神经网络</a></li></ul>
     </div>
   </div>
 
@@ -211,7 +317,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/Computer-Networking/" style="font-size: 10px;">Computer Networking</a> <a href="/blog/tags/神经网络/" style="font-size: 10px;">神经网络</a>
+      <a href="/blog/tags/Computer-Networking/" style="font-size: 10px;">Computer Networking</a> <a href="/blog/tags/ComputerNetwork/" style="font-size: 10px;">ComputerNetwork</a> <a href="/blog/tags/神经网络/" style="font-size: 10px;">神经网络</a>
     </div>
   </div>
 
@@ -231,6 +337,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/blog/2018/05/28/ComputerNetwork/">ComputerNetwork</a>
+          </li>
         
           <li>
             <a href="/blog/2018/05/23/vultr服务器搭建ss心得/">vultr服务器搭建ss心得</a>
