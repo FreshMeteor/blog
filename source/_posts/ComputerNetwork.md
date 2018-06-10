@@ -34,8 +34,8 @@ tags: ComputerNetwork
 * Ethernet  
 * WiFi
 
-3. Wireless access networks
-### Physical Media
+3. Wireless access networks  
+Physical Media
 * cable  
 * fiber
 * radio
@@ -51,7 +51,7 @@ store-and-forward transmission机制，交换机刚开始收到一个分组的�
 无需预留资源  
 ## 网络层级结构
 ![ISP互联](image1.png)  
-## Delay, packet loss and throughput
+ Delay, packet loss and throughput
 * Four delays:  
 1.nodal processing delay  
 2.queuing delay  
@@ -62,7 +62,7 @@ store-and-forward transmission机制，交换机刚开始收到一个分组的�
 **链路传输速率只是用来算路由器内部处理分组比特的，路由器之间传播分组比特的速率是由物理因素(光纤、双绞铜线)决定的！**  
 * throughput:  
 吞吐量取决于最慢速度。如果只有一条数据流通，那吞吐量近似等于链路最小速率。但例如，有5台电脑通过一条链路下载东西，则吞吐量=min{服务器接入链路速率，客户接入链路速率，链路传输速率/5}。  
-## protocol layers, service models
+protocol layers, service models
 ### *top-down approach*
 * Internet Layers
 1. application  
@@ -91,15 +91,15 @@ store-and-forward transmission机制，交换机刚开始收到一个分组的�
 传输时延。
 
 * **Consider sending a packet from a source host to a destination host over a fixed route. List the delay components in the end-to-end delay. Which of these delays are constant and which are variable?**  
-Nodal processing delay is variable.  
+Nodal processing delay is constant.
 Queuing delay is variable, because it depends on if there is a queue in route.  
-Transmission delay is variable. It depends on the size of packet.  
-Propagation delay is constant. Because the distance of two ends is constant.  
+Transmission delay is constant.
+Propagation delay is constant.
 * **Suppose Host A wants to send a large file to Host B. The path from Host A to Host B has three links, of rates R1 = 500kbps, R2 = 2Mbps, and R3 = 1Mbps.**  
 *a. Assuming no other traffic in the network, what is the throughput for the file transfer?*  
 Because of bottlenet link, the throughput = min{R1,R2,R3} = R1 = 500kbps.  
 *b. Suppose the file is 4 million bytes. Dividing the file size by the throughput, roughly how long will it take to transfer the file to Host B?*  
-time = 4000000/500000 = 8s  
+time = 4000000*8/500000 = 64s(1 byte = 8 bits)
 *c. Repeat(a)and(b), but now with R2 reduced to 100 kbps*
 the throughput = 100 kbps
 time_new = 4000000/100000 = 40s  
