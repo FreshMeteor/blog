@@ -72,7 +72,7 @@
 
     
         <meta property="article:published_time" content="5月 31, 2018" />
-        <meta property="article:modified_time" content="6月 10, 2018" />
+        <meta property="article:modified_time" content="6月 15, 2018" />
     
 
     <!-- The Twitter Card protocol -->
@@ -516,7 +516,7 @@
 <p>另外，SMTP是持续连接，在两个邮件服务器之间建立一个TCP连接之后，就发送所有这两者之间的邮件，才关闭TCP连接。  </p>
 <p>SMTP走25端口~  </p>
 <p>SMTP与HTTP对比：如果报文中有非7比特ASCII字符或是二进制数据(媒体文件之类)，SMTP必须按照7比特ASCII编码，而HTTP则没有这种限制。其次，HTTP每个对象都有一个响应报文，而SMTP则把所有报文的对象都放到一个报文中。</p>
-<p><img src="image.6" alt="电子邮件通信">  </p>
+<p><img src="image6.png" alt="电子邮件通信">  </p>
 <ul>
 <li>POP3 and IMAP<br>POP3服务器在会话过程中不保留状态信息，IMAP保留用户状态信息。<br>POP3很简单，功能少，而IMAP很复杂，实现的功能也很多。<br>POP3走110端口~<br><em>基于Web的电子邮件，采用HTTP进行客户和服务器之间的会话。但是发送文件的两个服务器之间仍然使用SMTP。</em></li>
 </ul>
@@ -545,6 +545,7 @@
 </li>
 </ul>
 <h2 id="P2P-application"><a href="#P2P-application" class="headerlink" title="P2P application"></a>P2P application</h2><p>对等方之间通过TCP建立连接。<br>rarest first(最稀缺优先)：对等方之间优先传输最稀缺的缺少块。<br>文件块一般为256kb<br>peers:对等方<br>洪流中(torrent)的一个对等方获得完整的文件之后，可能会留下来分享，也有可能自私地离开洪流。<br>BitTorrent的对换算法：一个对等方P1，检测能够向他提供最高速率的4个邻居。每10秒就检测一次。同时自己也<strong>随机</strong>选择一个邻居向其发送数据块，每30秒随机选择一次。找到合适自己速率的对等方进行对换。其他邻居将被阻塞(choke)。<br>相当于说，我检测到4个邻居，希望他们向我发送数据块，因为他们四个是我邻居中速率最高的。但是我不一定是我邻居中速率最高的4个。只有我们都在对方最高速率列表里，我们才能互相传输数据块。如果你速率很低，只能乖乖接受别人向你传输数据块。</p>
+<p><img src="image9.png" alt="一些周知端口号"></p>
 <h2 id="TCP套接字编程"><a href="#TCP套接字编程" class="headerlink" title="TCP套接字编程"></a>TCP套接字编程</h2><ul>
 <li><p>UDP套接字编程<br>进程通过UDP向目标进程发送分组，该分组有目标地址。目标地址由目的地的IP地址和目的套接字对应的端口构成。同时该发送的分组也附有源地址(包括源IP地址和源套接字端口)。附有源地址的操作由底层操作系统完成。</p>
 </li>
@@ -552,7 +553,7 @@
 <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a><strong>问题</strong></h2></li>
 </ul>
 <ol>
-<li><p>如何理解套接字(socket)?<br>进程是一个房子，而套接字就是房子的门。创建TCP连接其实就是连接两个进程的套接字。UDP无连接，但是也是通过套接字将数据分组发送出去的。套接字还提供了对应的端口号以供识别。</p>
+<li><p>如何理解套接字(socket)?<br>进程是一个房子，而套接字就是房子的门。创建TCP连接其实就是连接两个进程的套接字。UDP无连接，但是也是通过套接字将数据分组发送出去的。套接字还提供了对应的端口号以供识别。<br>经过和同学的讨论，我有了更深的认识。socket本质上是一个API，那么API本质上又是可编程接口函数，所以socket我理解起来就是一个方法，这个方法实现了诸如如何建立TCP连接，如何传递数据，如何标注端口号等方法。所以socket只是逻辑上存在的，实例化是需要被定义出来才可以使用的。</p>
 </li>
 <li><p>人们如何从Web站点获得IP地址？<br>通过DNS解析域名？</p>
 </li>
@@ -605,6 +606,14 @@
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
+    
+        <a href="/blog/2018/06/10/ComputerNetwork第三章/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Neuren
+        </a>
     
 
     <!-- Section Spacer -->
@@ -704,7 +713,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/blog/archives/2018/05/">五月 2018<span class="sidebar_archives-count">4</span></a>
+                <a class="sidebar_archives-link" href="/blog/archives/2018/06/">六月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/blog/archives/2018/05/">五月 2018<span class="sidebar_archives-count">4</span></a>
             </ul>
         </li>
         

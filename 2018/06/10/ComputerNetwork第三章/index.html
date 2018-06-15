@@ -12,7 +12,7 @@
     
     <title>
         
-            Archive: 2018/5 | 
+            ComputerNetwork第三章 | 
         
         MoleculeZ
     </title>
@@ -36,7 +36,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="FreshMeteor">
     <meta name="description" itemprop="description" content="student">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",ComputerNetwork">
 
     <!-- Site Verification -->
     
@@ -65,15 +65,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://freshmeteor.github.io/blog">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Archive: 2018/5 | MoleculeZ">
+    <meta property="og:title" content="ComputerNetwork第三章 | MoleculeZ">
     <meta property="og:image" content="/blog/img/favicon.png" />
     <meta property="og:description" content="student">
-    
+    <meta property="og:article:tag" content="ComputerNetwork"> 
 
+    
+        <meta property="article:published_time" content="6月 10, 2018" />
+        <meta property="article:modified_time" content="6月 15, 2018" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="Archive: 2018/5 | MoleculeZ">
+    <meta name="twitter:title" content="ComputerNetwork第三章 | MoleculeZ">
     <meta name="twitter:description" content="student">
     <meta name="twitter:image" content="/blog/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -81,7 +84,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://freshmeteor.github.io/blog/blog/archives/2018/05/index.html" />
+        <link rel="canonical" href="https://freshmeteor.github.io/blog/blog/2018/06/10/ComputerNetwork第三章/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -265,273 +268,406 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#计算机网络学习心得"><span class="post-toc-number">1.</span> <span class="post-toc-text">计算机网络学习心得</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第三章-运输层"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">第三章 运输层</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#这章写的有点啰嗦因为我怕我理解不到位╰（‵□′）╯"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">这章写的有点啰嗦因为我怕我理解不到位╰（‵□′）╯</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关键术语"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">关键术语</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#运输层概述"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">运输层概述</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#多路复用与多路分解"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">多路复用与多路分解</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#UDP"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">UDP</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#可靠数据传输原理"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">可靠数据传输原理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#面向连接的运输：TCP"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">面向连接的运输：TCP</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#问题"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">问题</span></a></li></ol></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/blog/2018/05/31/ComputerNetwork第二章/">ComputerNetwork第二章</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            ...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/blog/2018/05/31/ComputerNetwork第二章/" target="_self">Weiterlesen</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/blog/img/avatar.png" width="44px" height="44px" alt="FreshMeteor's avatar">
-            </div>
-            <div>
-                <strong>FreshMeteor</strong>
-                <span>5月 31, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/blog/2018/05/28/ComputerNetwork/">ComputerNetwork</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            ...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/blog/2018/05/28/ComputerNetwork/" target="_self">Weiterlesen</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/blog/img/avatar.png" width="44px" height="44px" alt="FreshMeteor's avatar">
-            </div>
-            <div>
-                <strong>FreshMeteor</strong>
-                <span>5月 28, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/blog/2018/05/23/vultr服务器搭建ss心得/">vultr服务器搭建ss心得</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/blog/2018/05/23/vultr服务器搭建ss心得/" target="_self">Weiterlesen</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/blog/img/avatar.png" width="44px" height="44px" alt="FreshMeteor's avatar">
-            </div>
-            <div>
-                <strong>FreshMeteor</strong>
-                <span>5月 23, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/blog/2018/05/06/MobileNet/">MobileNet学习</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/blog/2018/05/06/MobileNet/" target="_self">Weiterlesen</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/blog/img/avatar.png" width="44px" height="44px" alt="FreshMeteor's avatar">
-            </div>
-            <div>
-                <strong>FreshMeteor</strong>
-                <span>5月 06, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/blog/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/blog/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                ComputerNetwork第三章
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/blog/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>FreshMeteor</strong>
+        <span>6月 10, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/blog/tags/ComputerNetwork/">ComputerNetwork</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=ComputerNetwork第三章&url=https://freshmeteor.github.io/blog/blog/2018/06/10/ComputerNetwork第三章/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                Auf Weibo teilen
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=ComputerNetwork第三章&url=https://freshmeteor.github.io/blog/blog/2018/06/10/ComputerNetwork第三章/index.html&via=FreshMeteor" target="_blank">
+            <li class="mdl-menu__item">
+                Auf Twitter teilen
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://freshmeteor.github.io/blog/blog/2018/06/10/ComputerNetwork第三章/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Auf Facebook teilen
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://freshmeteor.github.io/blog/blog/2018/06/10/ComputerNetwork第三章/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Auf Google+ teilen
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="计算机网络学习心得"><a href="#计算机网络学习心得" class="headerlink" title="计算机网络学习心得"></a>计算机网络学习心得</h1><h2 id="第三章-运输层"><a href="#第三章-运输层" class="headerlink" title="第三章 运输层"></a>第三章 运输层</h2><h3 id="这章写的有点啰嗦因为我怕我理解不到位╰（‵□′）╯"><a href="#这章写的有点啰嗦因为我怕我理解不到位╰（‵□′）╯" class="headerlink" title="这章写的有点啰嗦因为我怕我理解不到位╰（‵□′）╯"></a>这章写的有点啰嗦因为我怕我理解不到位╰（‵□′）╯</h3><h3 id="关键术语"><a href="#关键术语" class="headerlink" title="关键术语"></a>关键术语</h3><ul>
+<li>logic communication(逻辑通信)</li>
+<li>segment(报文段)</li>
+<li>multiplexing(多路复用)</li>
+<li>demultiplexing(多路分解)</li>
+<li>wrap(回卷)</li>
+<li>undirectional data transfer(单向数据传输)</li>
+<li>bidirectional data transfer(双向数据传输，全双工数据传输)</li>
+<li>error detection(差错检测)</li>
+<li>ACK(肯定确认)、NAK(否定确认)</li>
+<li>retransmission(重传)</li>
+<li>duplicate(冗余的)</li>
+<li>connection-oriented(面向连接的)</li>
+<li>MSS(最大报文段长度，Maximum Segment Size)<h2 id="运输层概述"><a href="#运输层概述" class="headerlink" title="运输层概述"></a>运输层概述</h2>运输层为主机上运行的进程提供逻辑通信，而其下的网络层则是在主机之间提供逻辑通信。运输层面向进程，网络层面向主机。首先还是了解一下网络层，网络层有IP协议，为主机之间提供逻辑通信。IP不确保报文段交付，不确保按序交付，所以IP也被称为不可靠服务。每台主机至少有一个网络层地址(即IP地址)。<br>TCP和UDP将IP的交付服务从主机间拓展到主机的进程间。这样的拓展称为多路复用和多路分解。<br>UDP所能提供的仅有的两种服务即<strong>数据交付</strong>和<strong>差错检查</strong>。这两种也是最低限度的运输层服务。<br>TCP流量可调节，UDP流量不可调节。</li>
+</ul>
+<h2 id="多路复用与多路分解"><a href="#多路复用与多路分解" class="headerlink" title="多路复用与多路分解"></a>多路复用与多路分解</h2><ul>
+<li><p>将运输层报文段中的数据交付正确的套接字的工作称为<strong>多路分解</strong>。将源主机的数据块封装上首部信息生成报文段，传递给网络层的工作称为<strong>多路复用</strong>。所以，多路分解是分发，多路复用是整合。</p>
+</li>
+<li><p>UDP多路复用与多路分解：<br>  我们知道UDP是无连接的，一个<strong>UDP套接字</strong>由一个二元组来全面标识：(目的IP地址，目的端口号)。如果两个UDP报文段的源IP地址或源端口号，但是具有相同的目的IP地址和目的端口号，这两个报文段将进入同一个目的套接字。<br>  应用程序客户端让运输层自动透明地分配端口号，而服务器则有分配特定的端口号。</p>
+</li>
+<li><p>TCP多路复用与多路分解：<br>  TCP面向连接，一个<strong>TCP套接字</strong>由一个四元组来全面标识：(源IP地址，源端口号，目的IP地址，目的端口号)。四元组只要有一个不相同的报文段，都将定向到不同的套接字。所以一个套接字对应一个进程。如图，客户A和客户B都与服务器C创建TCP连接，A和B中有目的端口和目的IP地址,源端口都一致的进程，但是由于源IP地址不同，这两个目的相同的进程仍然可以被服务器B多路分解。<br>  <img src="image1.png" alt="TCP通信"></p>
+</li>
+</ul>
+<h2 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h2><ul>
+<li>UDP也是有优点的，总而言之就是比较轻量级：<ol>
+<li>对应用层发送数据控制更为精细。因为TCP有拥塞控制，但是UDP没有，发送不会被遏制。</li>
+<li>不需要建立连接。省了三次握手，就节省了很多时间。这也是为什么DNS运行在UDP上，这样解析起来很快。</li>
+<li>无连接状态。这种状态不需要追踪状态信息，不需要跟踪参数，所以在某些特定应用中UDP能支持更多的活跃用户。</li>
+<li>分组首部开销小。<strong>TCP报文段首部有20字节，而UDP报文段首部只有8字节。</strong></li>
+</ol>
+</li>
+</ul>
+<p>如图所示，流行因特网应用及其使用协议。<br><img src="image2.png" alt="流行因特网应用及其使用的协议">  </p>
+<ul>
+<li><p>UDP报文段结构(注意区分之前的UDP套接字二元组结构)<br><img src="image3.png" alt="UDP segment format"></p>
+</li>
+<li><p>UDP checksum(差错检验的方式)：发送方的UDP对所有16比特字的和进行反码运算，求和时遇到的任何溢出都将被wrapped(回卷)。(中文书第六版P135)最后所有字相加，包括检验和也相加，结果是全16位1则无差错，结果有0则有差错。</p>
+</li>
+<li><p>UDP其实也是可以实现可靠数据传输的。</p>
+<h2 id="可靠数据传输原理"><a href="#可靠数据传输原理" class="headerlink" title="可靠数据传输原理"></a>可靠数据传输原理</h2><p>在介绍TCP之前先引入可靠数据传输原理。本章使用的术语package(分组)是针对任何网络而言，在因特网中就是运输层的报文段(segment)了。</p>
+<ul>
+<li><p>rdt1.0 经完全可靠信道的可靠数据传输<br>一个有限状态机FSM只有一个状态，所以收到事件时进入的下一个状态也是调用自己。<br><img src="image4.png" alt="rdt1.0 FSM"></p>
+</li>
+<li><p>rdt2.0 经具有比特差错信道的可靠数据传输<br>底层信道更为实际的情况时分组比特可能受损，rdt2.0假设分组比特可能受损，但是仍然<strong>有序</strong>发送并被接收。<br>rdt2.0采用了差错检测、肯定/否定确认、重传三种方法来支持。<br><img src="image5.png" alt="rdt2.0 FSM"><br>发送方的FSM有两个状态。当发送方处于等待ACK或NAK的状态，它不能从上层获得数据。这种协议被称为<strong>停等(stop-and-wait)协议</strong>(也就是发送一个package之后就一直等着收到回应)。接收方FSM也只有一个状态。看似rdt2.0可以运行，但是我们忽略了一个问题，ACK或者NAK都是可能出错的，并且，分组出错以后没有规定恢复的方式也是一个问题。<br>于是引入了rdt2.1，发送方的FSM有4个状态，接收方FSM有2个状态(都翻倍了)。<br><img src="image6.png" alt="rdt2.1 FSM sender"><br><img src="image7.png" alt="rdt2.1 FSM reciever"><br>而rdt2.2使用的则是无NAK的方式。也就是说，rdt2.1用0和1来区分顺序。第一次发送方发送0分组给接收方，接收方接收到了之后返回ACK0。第二次发送方发送1分组给接收方，接收方未接收到，可以发NAK1，也可以不发。第三次发送方发送的分组将会用0标识，接收方接收到了，返回ACK0，则发送方这时候收到了两次连续的ACK0就知道第二次的1分组未发送成功了。因为rdt2假设没有丢包，所以不考虑ACK返回时候丢失的情况。<br><img src="image8.png" alt="rdt2.2 FSM sender"><br><img src="image9.png" alt="rdt2.2 FSM reciever"></p>
+</li>
+<li><p>rdt3.0 经具有比特差错的丢包信道的可靠数据传输<br>rdt3.0添加了一个timer，超时则重传。因为分组序号在0和1之间交替，所以也被称为alternating-bit protocol(比特交替协议)。rdt3.0性能瓶颈是它是一个停等协议，发送方发出一个分组只需要n秒，但是收到ACK需要m秒，n是远小于m的，在此期间发送方只能等着，什么事也做不了。所以流水线可靠数据传输协议出现了。  </p>
+</li>
+<li>流水线技术对可靠数据传输的要求</li>
+</ul>
+<ol>
+<li>每个输送的分组都需要唯一的序号，所以不仅仅局限于0和1了。</li>
+<li>收发两方需要能缓存多个分组</li>
+<li>需要有差错恢复办法：Go-Back-N或者是Selectiv Repeat</li>
+</ol>
+</li>
+<li><p>Go-Back-N<br>GBN协议将整个发送分组数规定为N，所有分组序号范围分为4个部分，如图：<br><img src="image10.png" alt="发送方看到的序号">  </p>
+<ol>
+<li>timer追踪的是最早发送但未被确认的分组，即黄色最左边</li>
+<li>GBN也被称为滑动窗口协议(sliding-window protocol)</li>
+<li>GBN<strong>发送</strong>方必须响应三种类型的事件：  <ul>
+<li>上层的调用：得知上层调用之后，检查窗口N是否已满，满了则返回告知上层，未满则加入新的分组进窗口  </li>
+<li>收到一个ACK：采用累计确认，收到ACK5代表ACK0-ACK5的包都已收到了。</li>
+<li>超时事件：在规定时间内没有收到已发送分组的ACK则判定该分组丢失，则重传<strong>所有</strong>已发送还未确认的分组。</li>
+</ul>
+</li>
+<li>GBN<strong>接收</strong>方的动作比较简单：按序递交分组给上层。当收到第n个分组时，接收方必须保证上一个递交的分组是n-1，才可以将这个第n分组递交给上层，否则就丢弃(<em>GBN不需要buffer</em>，没必要缓存第n分组，因为GBN重传机制，你不发ACKn回去，对方还会再发第n分组过来)。GBN接收方同时具有一个延时确认的机制，收到第一个分组之后不急着发ACK1回去，可以等多几个分组比如2，3，4，5，直接发一个ACK5回去就行~  </li>
+<li>GBN接收方只需要维护的信息就是下一个按序接受分组的序号(expectedseqnum)，GBN的接收方窗口大小为1。</li>
+</ol>
+</li>
+<li><p>Selective Repeat<br>GBN的重传机制会导致大量不必要的重传，降低了数据传输效率。SR方式的接收方不能累积确认了，得逐个确认逐个发ACK。<br><img src="image11.png" alt="SR发送方和接收方看到的序号空间">  </p>
+<ol>
+<li>失序分组将会被接收方缓存，知道它之前都有序为止。</li>
+<li>SR的<strong>发送方</strong>的事件与动作：<ul>
+<li>从上层接收数据：启动timer，检查下一个将要发送分组序号，如果在窗口N内，则发送。不在窗口内的就缓存或返回告知上层。</li>
+<li>超时：每个分组必须有自己的逻辑定时器。</li>
+<li>收到ACK：将该ACK对应分组标为已确认，如果该分组是最左边的，则N可向前滑动到最小未确认分组。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<ol start="3">
+<li>SR的<strong>接收方</strong>的事件与动作：<ul>
+<li>如果收到的分组序号在当前窗口内，则发送对应ACK回去，如果该分组恰好是最左需要的分组，则将窗口向前移动到未接受分组为止，而窗口滑过的所有分组一起交付给上层。如上图，如果接收方再收到第一个灰色分组，则可将连续三个分组一起交付给上层，然后发送该灰色分组对应序号的ACK回去。</li>
+<li>如果收到的分组序号在窗口左边(即以前已经收过)，则接收方需要返回ACK标识该分组以前已被确认过。</li>
+<li>其他情况直接忽略该分组。</li>
+</ul>
+</li>
+</ol>
+<p><em>window size(N)最好不要超过seq# size的一半，否则可能让接收方无法判断是一个新的分组还是一个重传。</em></p>
+<p>介绍完可靠数据传输原理，可以进入TCP协议的研究了。</p>
+<h2 id="面向连接的运输：TCP"><a href="#面向连接的运输：TCP" class="headerlink" title="面向连接的运输：TCP"></a>面向连接的运输：TCP</h2><p>TCP依赖于我们之前讨论的种种原理：差错检测，重传，累积确认，定时器，确认号和序号的首部字段。</p>
+<ul>
+<li><p>TCP提供全双工服务，TCP也是点对点的(不存在多播)！</p>
+</li>
+<li><p>TCP连接的每一端都有自己的接收缓存和发送缓存，这个buffer是在三次握手初期就建立的。TCP可从缓存中取出并放入报文段的数据受限于MSS(最大报文段长度)，而MSS又是根据MTU(最大传输单元)设置的。</p>
+</li>
+<li><p>TCP报文段结构<br><img src="image12.png" alt="TCP segment format">  </p>
+<ol>
+<li>sequence number and acknowledgement number这两个序号是TCP可靠传输的关键部分，比较重要。序号是数据流的第一个字节编号。确认号将会是主机填入报文段中该主机希望接下来收到的下一个字节的序号。比如主机A收到了主机B发过来的编号为0-100的所有字节，则主机A填到报文段里的确认号将会是101。</li>
+</ol>
+</li>
+<li><p>RTT and timeout<br>RTT：报文段的发出到sender收到确认之间的时间(往返时间)。<br>估计RTT时间： EstimatedRTT = EstimatedRTT * 0.875 + SampleRTT * 0.125<br>RTT偏差：DevRTT = DevRTT * 0.75 + | SampleRTT - EstimatedRTT | * 0.25<br>设置超时时间：TimeoutInterval = EstimatedRTT + 4 * DevRTT，推荐超时时间初始值为1秒。  </p>
+</li>
+<li><p>TCP可靠数据传输</p>
+<ol>
+<li>TCP发送方响应的事件与之前提到的SR发送方相似。</li>
+</ol>
+<ul>
+<li>接受上层数据</li>
+<li>超时</li>
+<li>收到ACK</li>
+</ul>
+<ol start="2">
+<li>TCP传输一旦超时，TCP会将超时间隔翻倍，而不是再推算一遍TimeoutInterval。</li>
+<li>有些时候超时周期太长了增加端到端时延，当TCP发送方收到<strong>3个</strong>duplicateACK的时候，就采取快速重传(fast retransmit)，即在定时器过期之间重传丢失的报文段。  </li>
+<li>TCP的累积确认让TCP看起来更像是GBN风格，但是TCP也能够缓存已接收的失序报文段。但TCP也有选择确认机制，所以看起来像GBN和SR的混合体。</li>
+</ol>
+</li>
+<li><p>flow control<br>之前提过TCP连接两端都会有buffer，但是一旦发送方发送太快，而接收方的应用程序提取数据速率太低，就导致缓存溢出，所以流量控制是基于接收方应用程序读取数据速率和发送方发送数据速率匹配的。<em>UDP并不提供流量控制~</em></p>
+</li>
+<li><p>TCP connection management<br>建立connection(three-way handshake)  </p>
+<ol>
+<li>客户发给服务器，SYN置为1，并随机选择client_isn序号放置于SYN报文段的序号中。</li>
+<li>服务器提取出SYN报文段，给客户分配连接需要的缓存和变量，向客户发送允许连接报文段，SYN为1，client_isn+1，并加上一个server_isn序号。</li>
+<li>收到服务器的SYNACK，客户也要为连接分配缓存和变量。客户向服务器发送另外一个报文段，server_isn+1，SYN置为0，该报文段还可以携带要发送的数据。   </li>
+</ol>
+<p>终止connection：两边都可以中断连接。A发起中断，A发送FIN置为1的报文段给B，B发回一个ACK，然后B再发一个FIN置为1的报文段给A，A发回一个ACK。总共发四次，释放双方的缓存和变量，TCP连接终止。  </p>
+<ul>
+<li>principle of congestion control<br>拥塞可能造成两种结果:长时延和丢包，congestion control 和 flow control不一样的。<br>拥塞控制的方法：  <ol>
+<li>end-to-end congestion control:TCP必须使用端到端拥塞控制，因为IP层不会向端系统提供有关网络拥塞的反馈信息。  </li>
+<li>Network-assistied congestion control:由路由器向发送方提供拥塞状态的反馈信息。反馈又有两种方式：<strong>choke packet</strong>(阻塞分组)形式和<strong>路由器标志</strong>发送的分组的某个字段表示拥塞，然后由接收方向发送方通知网络拥塞。SNA, DECbit, TCP/IP ECN, ATM-ABR等都采用了这种一个比特位指示拥塞状况的方式。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>TCP congestion control<br>因为IP层不向端系统提供显示的网络拥塞反馈(之前也提到过)，所以TCP拥塞控制必须采用端到端(end-to-end)拥塞控制。引出三个问题：  </p>
+<ol>
+<li>TCP发送方如何限制它向连接发送流量的速率？  </li>
+<li>TCP发送方如何感知拥塞？</li>
+<li>TCP感知到拥塞的时候如何改变其发送速率(算法)？</li>
+</ol>
+</li>
+</ul>
+<p>我们将逐个解决这些问题。TCP发送方如何限制发送流量的速率，引入一个新的变量<strong>拥塞窗口</strong>(congestion window)，表示为cwnd。cwnd用于限制发送方速率，所以发送方的最大速率大概是<em>rate = cwnd/RTT</em>字节/秒。所以调节cwnd的值就可调节发送方发送速率。  </p>
+<p>接下来，TCP发送方如何感知拥塞呢？<strong>丢包事件</strong>定义为两种情况，要么出现timeout，要么出现发送方收到3个来自接收方的冗余ACK(duplicate ACK)。一旦发生丢包，发送方就认为网络出现了拥塞。然后TCP发送方就可以减少cwnd窗口长度来降低发送速率，减缓网络负担。TCP被称作自计时(self-clocking)的。  </p>
+<p>最后，就是TCP拥塞控制算法了，主要包括三部分。  </p>
+<pre><code>1. 慢启动(slow start)：
+初始阶段，cwnd = 1MSS，rate = MSS/RTT，每次收到ACK之后MSS就翻倍，指数级增长，拥塞窗口越来越大(当前MSS与拥塞窗口cwnd相等)。当出现拥塞，TCP发送方将cwnd置为1MSS，重新开始慢启动过程。
+达到拥塞时，第二个变量ssthresh(慢启动阈值)设置为cwnd/2，这样就可以根据ssthresh值来预知拥塞，下一次达到ssthresh时就不再鲁莽翻倍cwnd。当达到ssthresh值时，TCP结束慢启动进入拥塞避免模式。还有一种结束慢启动的方式，在检测到3个冗余ACK时使用快速重传，然后进入快速恢复模式。  
+2. 拥塞避免(congestion-avoidance)：  
+TCP从慢启动进入拥塞避免情况，每收到一个ACK，则将cwnd增加一个MSS(而不是慢启动的翻番)，当出现timeout时将cwnd设置为一个MSS，当出现丢包时，ssthresh的值被更新为cwnd一半。  
+3. 快速恢复  
+慢启动和拥塞避免时TCP必须的，但快速恢复不是。
+</code></pre><p>总结，TCP拥塞控制被称为加性增，乘性减，即AIMD方式。如图即可理解。<br><img src="image13.png" alt="Additive-Increase, Multiplicative-Decrease,AIMD"></p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ol>
+<li>TCP和UDP的区别？</li>
+</ol>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://freshmeteor.github.io/blog/2018/06/10/ComputerNetwork第三章/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://freshmeteor.github.io/blog/2018/06/10/ComputerNetwork第三章/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//moleculez.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/blog/2018/05/31/ComputerNetwork第二章/" id="post_nav-older" class="next-content">
+            Älteren
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
