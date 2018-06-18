@@ -164,8 +164,8 @@ RTT偏差：DevRTT = DevRTT \* 0.75 + | SampleRTT - EstimatedRTT | \* 0.25
 
 最后，就是TCP拥塞控制算法了，主要包括三部分。  
     1. 慢启动(slow start)：
-    初始阶段，cwnd = 1MSS，rate = MSS/RTT，每次收到ACK之后MSS就翻倍，指数级增长，拥塞窗口越来越大(当前MSS与拥塞窗口cwnd相等)。当出现拥塞，TCP发送方将cwnd置为1MSS，重新开始慢启动过程。
-    达到拥塞时，第二个变量ssthresh(慢启动阈值)设置为cwnd/2，这样就可以根据ssthresh值来预知拥塞，下一次达到ssthresh时就不再鲁莽翻倍cwnd。当达到ssthresh值时，TCP结束慢启动进入拥塞避免模式。还有一种结束慢启动的方式，在检测到3个冗余ACK时使用快速重传，然后进入快速恢复模式。  
+    初始阶段，cwnd = 1MSS，rate = MSS/RTT，每次收到ACK之后MSS就翻倍，指数级增长，拥塞窗口越来越大(当前MSS与拥塞窗口cwnd相等)。当出现**超时指示**拥塞，TCP发送方将cwnd置为1MSS，重新开始慢启动过程。
+    达到拥塞时，第二个变量ssthresh(慢启动阈值)设置为cwnd/2，这样就可以根据ssthresh值来预知拥塞，下一次达到ssthresh时就不再鲁莽翻倍cwnd。当达到ssthresh值时，TCP结束慢启动进入拥塞避免模式。当出现**3个冗余ACK**指示拥塞，cwnd不是归为1而是减半。还有一种结束慢启动的方式，在检测到3个冗余ACK时使用快速重传，然后进入快速恢复模式。  
     2. 拥塞避免(congestion-avoidance)：  
     TCP从慢启动进入拥塞避免情况，每收到一个ACK，则将cwnd增加一个MSS(而不是慢启动的翻番)，当出现timeout时将cwnd设置为一个MSS，当出现丢包时，ssthresh的值被更新为cwnd一半。  
     3. 快速恢复  
