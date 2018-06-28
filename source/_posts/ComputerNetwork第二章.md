@@ -159,5 +159,20 @@ BitTorrent的对换算法：一个对等方P1，检测能够向他提供最高�
 
 2. 人们如何从Web站点获得IP地址？  
   通过DNS解析域名？
+
 3. Is it possible for an organization's Web server and mail server to have exactly the same  alias for a hostname(for example, foo.com)? What would be the type for the RR that contains the hostname of the mail server?  
-  Yes, mail server and Web server can have the same alias for the host name. The type for the RR that contains the hostname of the mail server is MX.
+  Yes, mail server and Web server can have the same alias for the host name. The type for the RR that contains the hostname of the mail server is MX.  
+
+4. What is the new features of HTTP 2.0?  
+  * 增加二进制分帧
+  * 压缩头部
+  * 多路复用
+  * 请求优先级
+  * 服务器提示
+
+5. What is the difference between network architecture and application architecture?  
+  网络体系结构是将网络通信过程组织成**层**的形式，例如因特网的五层结构。  
+  应用程序体系结构是由设计者规定的一种广泛的结构，例如client-server和P2P。  
+
+6. What information is used by a process running on one host to identify a process running on another host?  
+  host IP address and port number of socket.
