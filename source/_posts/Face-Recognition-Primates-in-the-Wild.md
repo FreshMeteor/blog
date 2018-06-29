@@ -2,6 +2,7 @@
 title: 'Face Recognition: Primates in the Wild'
 date: 2018-06-27 11:40:20
 tags: Computer Vision
+mathjax: true
 ---
 
 # 论文学习：Face Recognition: Primates int the Wild  
