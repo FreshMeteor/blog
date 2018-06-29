@@ -462,14 +462,14 @@
 <li><p>HFC(Hybrid Fiber Coax)<br>  deployment: TV company<br>  upstream: 2Mbps<br>  downstream: 30Mbps<br>  <strong>shared</strong>  </p>
 </li>
 </ul>
-<ol start="2">
+<ol>
 <li>company access(企业接入)  </li>
 </ol>
 <ul>
 <li>Ethernet  </li>
 <li>WiFi</li>
 </ul>
-<ol start="3">
+<ol>
 <li>Wireless access networks<br>Physical Media</li>
 </ol>
 <ul>
@@ -479,7 +479,7 @@
 <li>circuit switching<br>在发送方与接收方之间预留所需资源，可以防止阻塞与资源占用。链路中的电路是通过频分复用(Frequency-Division Multiplexing，FDM)或时分复用(Time-Division Multiplexing，TDM)来实现的。  </li>
 </ul>
 <ul>
-<li>packet switching<br>端到端的时延:在源和目的地之间有N-1台路由器，故有N条路径，一个分组大小为L，传输速率都为R，所以端到端的时延=N*L/R<br>store-and-forward transmission机制，交换机刚开始收到一个分组的第一个比特的时候不能直接转发，要等整个分组都收到以后才能开始转发(报文message分成分组packet，分组再分成几部分发出)<br><strong>丢包</strong>:输出链路被占用，要输出的分组就放入输出缓存，当输出缓存也被占满的时候，到达的分组或已经排队的分组之一将被丢弃。<br>无需预留资源  <h2 id="网络层级结构"><a href="#网络层级结构" class="headerlink" title="网络层级结构"></a>网络层级结构</h2><img src="image1.png" alt="ISP互联"><br>Delay, packet loss and throughput</li>
+<li>packet switching<br>端到端的时延:在源和目的地之间有N-1台路由器，故有N条路径，一个分组大小为L，传输速率都为R，所以端到端的时延=N<em>L/R<br>store-and-forward transmission机制，交换机刚开始收到一个分组的第一个比特的时候不能直接转发，要等整个分组都收到以后才能开始转发(报文message分成分组packet，分组再分成几部分发出)<br><em>*丢包</em></em>:输出链路被占用，要输出的分组就放入输出缓存，当输出缓存也被占满的时候，到达的分组或已经排队的分组之一将被丢弃。<br>无需预留资源  <h2 id="网络层级结构"><a href="#网络层级结构" class="headerlink" title="网络层级结构"></a>网络层级结构</h2><img src="image1.png" alt="ISP互联"><br>Delay, packet loss and throughput</li>
 <li>Four delays:<br>1.nodal processing delay<br>2.queuing delay<br>3.transmission delay(传输时延)<br>4.propagation delay(传播时延)<br><strong>传输时延和传播时延的区别：传输时延(transmission delay)是路由器将分组从内部推出所需要的时间，与分组长度和链路传输速率有关，与路由器之间的距离无关。传播时延(propagation delay)是一个比特从一台路由器向另一台路由器传播所需要的时间，与路由器之间的距离有关，与分组长度和链路传播速率无关。</strong></li>
 </ul>
 <p><strong>链路传输速率只是用来算路由器内部处理分组比特的，路由器之间传播分组比特的速率是由物理因素(光纤、双绞铜线)决定的！</strong>  </p>
