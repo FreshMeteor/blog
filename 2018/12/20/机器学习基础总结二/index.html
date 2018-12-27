@@ -12,7 +12,7 @@
     
     <title>
         
-            Tag: Computer Vision | 
+            机器学习基础总结二 | 
         
         MoleculeZ
     </title>
@@ -36,7 +36,7 @@
     <meta name="theme-color" content="#0097A7">
     <meta name="author" content="FreshMeteor">
     <meta name="description" itemprop="description" content="student">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",Machine Learning">
 
     <!-- Site Verification -->
     
@@ -65,15 +65,18 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://freshmeteor.github.io/blog">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Tag: Computer Vision | MoleculeZ">
+    <meta property="og:title" content="机器学习基础总结二 | MoleculeZ">
     <meta property="og:image" content="/blog/img/favicon.png" />
     <meta property="og:description" content="student">
-    
+    <meta property="og:article:tag" content="Machine Learning"> 
 
+    
+        <meta property="article:published_time" content="12月 20, 2018" />
+        <meta property="article:modified_time" content="12月 22, 2018" />
     
 
     <!-- The Twitter Card protocol -->
-    <meta name="twitter:title" content="Tag: Computer Vision | MoleculeZ">
+    <meta name="twitter:title" content="机器学习基础总结二 | MoleculeZ">
     <meta name="twitter:description" content="student">
     <meta name="twitter:image" content="/blog/img/favicon.png">
     <meta name="twitter:card" content="summary_large_image" />
@@ -81,7 +84,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://freshmeteor.github.io/blog/blog/tags/Computer-Vision/index.html" />
+        <link rel="canonical" href="https://freshmeteor.github.io/blog/blog/2018/12/20/机器学习基础总结二/index.html" />
     
 
     <!-- Structured-data for SEO -->
@@ -265,96 +268,296 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#机器学习基础内容"><span class="post-toc-number">1.</span> <span class="post-toc-text">机器学习基础内容</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#机器学习三大构成部分"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">机器学习三大构成部分</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Loss"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Loss</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#有监督学习-Supervised-learning-和无监督学习-Unsupervised-learning"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">有监督学习(Supervised learning)和无监督学习(Unsupervised learning)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#监督学习总的来说就是：-regression-amp-classification-回归和分类"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">监督学习总的来说就是： regression &amp; classification (回归和分类)</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Linear-Regression-线性回归"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Linear Regression(线性回归)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#机器学习中向量默认是列向量"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">机器学习中向量默认是列向量</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#w和b最优解的闭式解"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">w和b最优解的闭式解</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#梯度下降方法"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">梯度下降方法</span></a></li></ol></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/blog/2018/06/27/Face-Recognition-Primates-in-the-Wild/">Face Recognition: Primates in the Wild</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/blog/2018/06/27/Face-Recognition-Primates-in-the-Wild/" target="_self">Read more</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/blog/img/avatar.png" width="44px" height="44px" alt="FreshMeteor's avatar">
-            </div>
-            <div>
-                <strong>FreshMeteor</strong>
-                <span>6月 27, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/blog/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/blog/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                机器学习基础总结二
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/blog/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>FreshMeteor</strong>
+        <span>12月 20, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/blog/tags/Machine-Learning/">Machine Learning</a>
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=机器学习基础总结二&url=https://freshmeteor.github.io/blog/blog/2018/12/20/机器学习基础总结二/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Weibo
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=机器学习基础总结二&url=https://freshmeteor.github.io/blog/blog/2018/12/20/机器学习基础总结二/index.html&via=FreshMeteor" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://freshmeteor.github.io/blog/blog/2018/12/20/机器学习基础总结二/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://freshmeteor.github.io/blog/blog/2018/12/20/机器学习基础总结二/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                Share to Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="机器学习基础内容"><a href="#机器学习基础内容" class="headerlink" title="机器学习基础内容"></a>机器学习基础内容</h1><h2 id="机器学习三大构成部分"><a href="#机器学习三大构成部分" class="headerlink" title="机器学习三大构成部分"></a>机器学习三大构成部分</h2><ul>
+<li><p>Data</p>
+</li>
+<li><p>Model</p>
+</li>
+<li><p>Loss  </p>
+</li>
+</ul>
+<h2 id="Loss"><a href="#Loss" class="headerlink" title="Loss"></a>Loss</h2><p>衡量预测值与真实值之间的差异函数，机器学习的目的就是尽可能让Loss值降低，即提高自己预测的准确度，提高模型的鲁棒性。<br><img src="image.1" alt="两种常见的Loss函数"></p>
+<h2 id="有监督学习-Supervised-learning-和无监督学习-Unsupervised-learning"><a href="#有监督学习-Supervised-learning-和无监督学习-Unsupervised-learning" class="headerlink" title="有监督学习(Supervised learning)和无监督学习(Unsupervised learning)"></a>有监督学习(Supervised learning)和无监督学习(Unsupervised learning)</h2><p>有监督和无监督学习是机器学习的两种办法(还有半监督学习，即强化学习)。  </p>
+<p><strong>有监督学习</strong>有标记，在分类任务中很重要。也是<strong>决策树</strong>和<strong>神经网络</strong>最常见的技术。常见的有监督学习算法：回归分析和统计分类。最典型的算法是<strong>KNN</strong>和<strong>SVM</strong>  </p>
+<h3 id="监督学习总的来说就是：-regression-amp-classification-回归和分类"><a href="#监督学习总的来说就是：-regression-amp-classification-回归和分类" class="headerlink" title="监督学习总的来说就是： regression &amp; classification (回归和分类)"></a>监督学习总的来说就是： regression &amp; classification (回归和分类)</h3><p><strong>无监督学习</strong>无标记，用于聚类， PCA和很多deep learning算法都属于无监督学习。</p>
+<h2 id="Linear-Regression-线性回归"><a href="#Linear-Regression-线性回归" class="headerlink" title="Linear Regression(线性回归)"></a>Linear Regression(线性回归)</h2><h3 id="机器学习中向量默认是列向量"><a href="#机器学习中向量默认是列向量" class="headerlink" title="机器学习中向量默认是列向量"></a><em>机器学习中向量默认是列向量</em></h3><p>给定由 $d$ 个属性描述的示例 $x=(x_1;x_2;x_3…;x_d)$，其中 $x_i$ 是第 $i$ 个属性上的取值，线性模型试图学得一个通过属性的线性组合来进行预测的函数，即：</p>
+<script type="math/tex; mode=display">\Large f(\bm x)=w_1x_1+w_2x_2+...w_dx_d+b</script><p>用向量形式可写成：</p>
+<script type="math/tex; mode=display">\Large f(\bm x)=\bm{w}^T\bm{x}+b</script><p>其中$\bm w=(w_1;w_2;…;w_d)$，$\bm w$ 和 b 学得之后，模型就可以确定。如何确定这两个参数呢？基本上分为两种办法：</p>
+<ul>
+<li>闭式解</li>
+<li>梯度下降</li>
+</ul>
+<h2 id="w和b最优解的闭式解"><a href="#w和b最优解的闭式解" class="headerlink" title="w和b最优解的闭式解"></a>w和b<strong>最优解</strong>的闭式解</h2><p>证明过程直接贴图吧，建议自己证明一遍<br>回归的性能度量方式——最小二乘法(又称最小平方法)：<br><img src="image3.PNG" alt="最小二乘法"><br><img src="image2.PNG" alt="最小二乘法矩阵表示">  </p>
+<p><strong>w*的最优闭式解表示为：</strong>  </p>
+<script type="math/tex; mode=display">\Large w*=(X^TX)^{-1}X^Ty=argmin_w\space L_D(w)</script><p>证明：<br><img src="image4.PNG" alt="step1"><br><img src="image5.PNG" alt="step2"><br><img src="image6.PNG" alt="step3">  </p>
+<p>然而闭式解有两个缺陷：  </p>
+<ul>
+<li>很多矩阵不可逆  </li>
+<li>很多大型矩阵的求逆计算量很大，时间复杂度为$O(n^3)$</li>
+</ul>
+<h2 id="梯度下降方法"><a href="#梯度下降方法" class="headerlink" title="梯度下降方法"></a>梯度下降方法</h2><p>作为一阶最优化方法，要找到一个函数<strong>局部最小值</strong>，就必须在函数当前点的<strong>反方向</strong>，用<strong>规定步长</strong>进行迭代搜索。<em>每次迭代的步长是可以改变的。</em><br>梯度下降法处理一些复杂的非线性函数会出现问题。而且靠近极小值时速度会减慢。<br>通过尽可能降低Loss函数来获得一个最优的w。而最优化的方向我们定义为：  </p>
+<script type="math/tex; mode=display">\Large d=-\frac{\partial{L(w)}}{\partial w}</script><p>一次梯度下降的过程:<br><img src="image7.PNG" alt="梯度下降过程">  </p>
+<p>$\eta$称为学习率，学习率要适合，不能过大也不能过小：  </p>
+<ul>
+<li>$\eta$过大，曲线容易振荡和diverge</li>
+<li>$\eta$过小，又收敛(converge)的太慢  </li>
+</ul>
+<p>设置一个合适的学习率来让loss完美的收敛，一般可以这样做：</p>
+<ul>
+<li>刚开始训练的时候设置比较大的学习率，这样曲线下降的快</li>
+<li>在之后的epoch使用小学习率，接近结束时，衰减率应达到100倍以上</li>
+<li>学习率的衰减可满足：$\eta^{t+1}=\displaystyle\frac{\eta^t}{t+1}$</li>
+</ul>
+
+    
+
     
 </div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://freshmeteor.github.io/blog/2018/12/20/机器学习基础总结二/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://freshmeteor.github.io/blog/2018/12/20/机器学习基础总结二/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//moleculez.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/blog/2018/12/22/机器学习基础总结三/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Newer
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/blog/2018/12/18/机器学习基础总结一/" id="post_nav-older" class="next-content">
+            Older
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -500,6 +703,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
@@ -655,6 +866,26 @@ It will not impact the appearance and can give developers a lot of support :)
 </script>
 
 <!-- MathJax Load-->
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+    <script type="text/javascript" src="/js/mathjax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
 
 <script type="text/ls-javascript" id="lazy-load">
     // Offer LazyLoad
